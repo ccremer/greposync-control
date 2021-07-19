@@ -1,0 +1,18 @@
+# This is the config file for greposync that defines default values
+# Visit the documentation at https://ccremer.github.io/greposync
+
+:globals:
+  comment:
+    text: |
+      This file is managed by greposync.
+      Do not modify manually.
+      Adjust variables in `.sync.yml`.
+    prefix: "# "
+    open: ""
+    closed: ""
+
+.github/workflows/test.yml:
+  codeclimateReporterID: ""
+
+.gitignore:
+  additionalEntries: []
