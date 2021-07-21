@@ -1,0 +1,32 @@
+name: Sync
+
+on:
+  workflow_dispatch:
+    inputs:
+      filter:
+        description: 'Filter sync for a specific repository (exact name or regex)'
+        required: false
+        default: ''
+  push:
+    branches:
+      - master
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configure Git
+        run: |
+          git config --global user.name "$GITHUB_ACTOR"
+          git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Run greposync
+        uses: ccremer/greposync-action@15c2c3d6bcf0ff747a166d08636b65166cd2143b
+        env:
+          GITHUB_TOKEN: ${{ secrets.GREPOSYNC_TOKEN }}
+        with:
+          args: update --project-include=${{ github.event.inputs.filter }}
