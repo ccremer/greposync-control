@@ -30,4 +30,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GREPOSYNC_TOKEN }}
         with:
           args: update --project-include=${{ github.event.inputs.filter }} --log-showLog
-          version: v0.2.0-rc5
+          version: v0.2.0-rc6
