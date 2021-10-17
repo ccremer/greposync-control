@@ -3,3 +3,4 @@
 
 repositories:
   - name: fronius-exporter
+  - name: go-command-pipeline

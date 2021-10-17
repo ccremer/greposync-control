@@ -1,3 +1,5 @@
+{{- template "comment" . -}}
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -15,10 +17,6 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
-
-# IDEs
-/.idea
-/.vscode
 
 # Binaries and dists
 /{{ .Metadata.Repository.Name }}

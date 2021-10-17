@@ -3,7 +3,7 @@
 
 :globals:
   comment:
-    text: |
+    text: |-
       This file is managed by greposync.
       Do not modify manually.
       Adjust variables in `.sync.yml`.
@@ -12,7 +12,23 @@
     closed: ""
 
 .github/workflows/test.yml:
-  codeclimateReporterID: ""
+  codeclimate:
+    reporterID: ""
+    enabled: true
+  codecov:
+    enabled: false
+  goreport:
+    enabled: false
+
+.github/workflows/release.yml:
+  # Choose one of [goreleaser, plain]
+  releaseStrategy: goreleaser
 
 .gitignore:
   additionalEntries: []
+
+codecov.yml:
+  delete: true
+  diffThresholds:
+    project: 10%
+    patch: 50%

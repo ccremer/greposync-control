@@ -1,0 +1,10 @@
+{{- template "comment" . -}}
+comment: false
+coverage:
+  status:
+    patch:
+      default:
+        threshold: {{ .Values.diffThresholds.patch }}
+    project:
+      default:
+        threshold: {{ .Values.diffThresholds.project }}
