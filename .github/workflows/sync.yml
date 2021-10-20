@@ -25,7 +25,7 @@ jobs:
         with:
             ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Run greposync
-        uses: ccremer/greposync-action@15c2c3d6bcf0ff747a166d08636b65166cd2143b
+        uses: ccremer/greposync-action@981e693f85d3232e05dd44bec8e25dd0923aed10
         env:
           GITHUB_TOKEN: ${{ secrets.GREPOSYNC_TOKEN }}
         with:
