@@ -19,4 +19,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GREPOSYNC_TOKEN }}
         with:
           args: update --log-showLog --log-showDiff --dry-run=offline
-          version: v0.3.0-rc1
+          version: v0.3.0-rc2
