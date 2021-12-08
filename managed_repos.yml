@@ -3,4 +3,5 @@
 
 repositories:
   - name: fronius-exporter
+  - name: stiebeleltron-exporter
   - name: go-command-pipeline
