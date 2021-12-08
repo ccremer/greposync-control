@@ -11,6 +11,10 @@
     open: ""
     closed: ""
 
+  features:
+    makeDockerBuild:
+      enabled: true
+
 .github/workflows/test.yml:
   codeclimate:
     reporterID: ""
