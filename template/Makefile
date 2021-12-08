@@ -55,5 +55,6 @@ run: ## Run locally
 ### Assets
 ###
 
+.PHONY: $(BIN_FILENAME)
 $(BIN_FILENAME):
 	@go build -o $(BIN_FILENAME) .
