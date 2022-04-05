@@ -42,7 +42,7 @@ jobs:
 {{- end -}}
 {{ if .Values.codecov.enabled }}
       - name: Upload coverage
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
         with:
           files: ./cover.out
 {{- end }}
