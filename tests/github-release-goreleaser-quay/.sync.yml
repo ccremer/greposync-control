@@ -1,0 +1,8 @@
+:globals:
+  delete: true
+
+.github/workflows/release.yml:
+  delete: false
+  imageRegistries:
+    quayio:
+      enabled: true

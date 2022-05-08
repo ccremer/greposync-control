@@ -1,0 +1,7 @@
+:globals:
+  delete: true
+
+.gitignore:
+  delete: false
+  additionalEntries:
+    - entry 1

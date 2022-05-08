@@ -1,0 +1,8 @@
+:globals:
+  delete: true
+
+.github/workflows/test.yml:
+  delete: false
+  codeclimate:
+    reporterID: ID
+    enabled: true

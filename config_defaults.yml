@@ -27,6 +27,11 @@
 .github/workflows/release.yml:
   # Choose one of [goreleaser, plain]
   releaseStrategy: goreleaser
+  imageRegistries:
+    quayio:
+      enabled: false
+    ghcrio:
+      enabled: true
 
 .gitignore:
   additionalEntries: []

@@ -1,0 +1,5 @@
+:globals:
+  delete: true
+
+.github/workflows/release.yml:
+  delete: false

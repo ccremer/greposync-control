@@ -9,7 +9,7 @@ git:
   # Whether to use force-push. Required when using --amend
   forcePush: false
   # The default owner or organization name
-  namespace: ccremer
+  defaultNamespace: ccremer
 pr:
   bodyTemplate: This Pull request updates this repository with changes from a greposync template repository.
   # Enable this flag to create and update pull requests
