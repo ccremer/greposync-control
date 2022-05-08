@@ -1,0 +1,9 @@
+:globals:
+  delete: true
+
+.github/workflows/test.yml:
+  delete: false
+  codeclimate:
+    enabled: false
+  goreport:
+    enabled: true

@@ -1,0 +1,5 @@
+:globals:
+  delete: true
+
+.gitignore:
+  delete: false
