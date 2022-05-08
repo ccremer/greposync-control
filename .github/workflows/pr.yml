@@ -4,18 +4,33 @@ on:
   pull_request: {}
 
 jobs:
-  update:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Run greposync
+        uses: ccremer/greposync-action@v0
+        with:
+          args: test
+          version: v0.3.0-rc4
+
+  update:
+    runs-on: ubuntu-latest
+    needs:
+      - test
+    steps:
+      - uses: actions/checkout@v3
+
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.5.4
         with:
             ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Run greposync
+
+      - name: Run greposync diff
         uses: ccremer/greposync-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GREPOSYNC_TOKEN }}
         with:
-          args: update --log-showLog --log-showDiff --dry-run=offline
-          version: v0.3.0-rc2
+          args: update --log.showLog --log.showDiff --dry-run=offline
+          version: v0.3.0-rc4
