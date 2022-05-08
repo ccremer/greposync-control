@@ -29,5 +29,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GREPOSYNC_TOKEN }}
         with:
-          args: update --project-include=${{ github.event.inputs.filter }} --log-showLog --git-amend --git-forcePush
+          args: update --include=${{ github.event.inputs.filter }} --log.showLog --git.amend --git.forcePush
           version: v0.3.0-rc4
