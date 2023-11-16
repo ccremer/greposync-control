@@ -33,7 +33,7 @@ jobs:
         run: make test
 {{ if .Values.codeclimate.enabled }}
       - name: Upload code coverage report to Code Climate
-        uses: paambaati/codeclimate-action@v3.0.0
+        uses: paambaati/codeclimate-action@v3.2.0
         env:
           CC_TEST_REPORTER_ID: {{ .Values.codeclimate.reporterID }}
         with:
